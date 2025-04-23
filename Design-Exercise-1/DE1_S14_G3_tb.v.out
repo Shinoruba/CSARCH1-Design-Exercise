@@ -1,0 +1,264 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001fe1ee4b230 .scope module, "TestBench" "TestBench" 2 2;
+ .timescale 0 0;
+v000001fe1eea5090_0 .net "A", 0 0, L_000001fe1eea73b0;  1 drivers
+v000001fe1eea47d0_0 .net "B", 0 0, L_000001fe1eea87b0;  1 drivers
+v000001fe1eea5450_0 .net "C", 0 0, L_000001fe1eea8060;  1 drivers
+v000001fe1eea54f0_0 .net "D", 0 0, L_000001fe1eea7880;  1 drivers
+v000001fe1eea45f0_0 .net "E", 0 0, L_000001fe1eea8350;  1 drivers
+v000001fe1eea4050_0 .net "F", 0 0, L_000001fe1ee467a0;  1 drivers
+v000001fe1eea5d10_0 .net "G", 0 0, L_000001fe1ee46ff0;  1 drivers
+v000001fe1eea40f0_0 .var "W", 0 0;
+v000001fe1eea4190_0 .var "X", 0 0;
+v000001fe1eea4690_0 .var "Y", 0 0;
+v000001fe1eea4a50_0 .var "Z", 0 0;
+S_000001fe1ee4ac10 .scope module, "DUT1" "DE1" 2 8, 3 69 0, S_000001fe1ee4b230;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "C";
+    .port_info 3 /OUTPUT 1 "D";
+    .port_info 4 /OUTPUT 1 "E";
+    .port_info 5 /OUTPUT 1 "F";
+    .port_info 6 /OUTPUT 1 "G";
+    .port_info 7 /INPUT 1 "W";
+    .port_info 8 /INPUT 1 "X";
+    .port_info 9 /INPUT 1 "Y";
+    .port_info 10 /INPUT 1 "Z";
+L_000001fe1ee47060 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea8430, C4<1>, C4<1>;
+L_000001fe1ee465e0 .functor AND 1, L_000001fe1ee47060, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1ee46730 .functor OR 1, L_000001fe1eea9150, L_000001fe1eea7340, C4<0>, C4<0>;
+L_000001fe1ee46960 .functor OR 1, L_000001fe1ee46730, L_000001fe1eea8510, C4<0>, C4<0>;
+L_000001fe1ee466c0 .functor OR 1, L_000001fe1ee46960, L_000001fe1ee465e0, C4<0>, C4<0>;
+L_000001fe1ee46ff0 .functor BUFZ 1, L_000001fe1ee466c0, C4<0>, C4<0>, C4<0>;
+L_000001fe1ee470d0 .functor AND 1, v000001fe1eea40f0_0, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1ee471b0 .functor AND 1, L_000001fe1ee470d0, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1ee46650 .functor OR 1, L_000001fe1eea85f0, L_000001fe1ee46c00, C4<0>, C4<0>;
+L_000001fe1ee47220 .functor OR 1, L_000001fe1ee46650, L_000001fe1ee46a40, C4<0>, C4<0>;
+L_000001fe1ee47290 .functor OR 1, L_000001fe1ee47220, L_000001fe1ee46b20, C4<0>, C4<0>;
+L_000001fe1ee47300 .functor OR 1, L_000001fe1ee47290, L_000001fe1eea79d0, C4<0>, C4<0>;
+L_000001fe1ee46810 .functor OR 1, L_000001fe1ee47300, L_000001fe1ee471b0, C4<0>, C4<0>;
+L_000001fe1ee467a0 .functor BUFZ 1, L_000001fe1ee46810, C4<0>, C4<0>, C4<0>;
+L_000001fe1ee46880 .functor AND 1, L_000001fe1eea8430, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1ee46b20 .functor AND 1, L_000001fe1ee46880, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1ee469d0 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1ee46a40 .functor AND 1, L_000001fe1ee469d0, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1ee46b90 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea8430, C4<1>, C4<1>;
+L_000001fe1ee46c00 .functor AND 1, L_000001fe1ee46b90, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1eea7ab0 .functor AND 1, L_000001fe1eea83c0, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1eea7dc0 .functor OR 1, L_000001fe1eea89e0, L_000001fe1eea7420, C4<0>, C4<0>;
+L_000001fe1eea7ff0 .functor OR 1, L_000001fe1eea7dc0, L_000001fe1eea8eb0, C4<0>, C4<0>;
+L_000001fe1eea7490 .functor OR 1, L_000001fe1eea7ff0, L_000001fe1eea7ab0, C4<0>, C4<0>;
+L_000001fe1eea7730 .functor OR 1, L_000001fe1eea7490, L_000001fe1eea77a0, C4<0>, C4<0>;
+L_000001fe1eea7a40 .functor OR 1, L_000001fe1eea7730, L_000001fe1eea9000, C4<0>, C4<0>;
+L_000001fe1eea8060 .functor BUFZ 1, L_000001fe1eea7a40, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea7420 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1eea7650 .functor AND 1, L_000001fe1eea83c0, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1eea7b90 .functor OR 1, L_000001fe1eea8ac0, L_000001fe1eea7c70, C4<0>, C4<0>;
+L_000001fe1eea7500 .functor OR 1, L_000001fe1eea7b90, L_000001fe1eea8cf0, C4<0>, C4<0>;
+L_000001fe1eea7e30 .functor OR 1, L_000001fe1eea7500, L_000001fe1eea8820, C4<0>, C4<0>;
+L_000001fe1eea8220 .functor OR 1, L_000001fe1eea7e30, L_000001fe1eea9070, C4<0>, C4<0>;
+L_000001fe1eea7b20 .functor OR 1, L_000001fe1eea8220, L_000001fe1eea7650, C4<0>, C4<0>;
+L_000001fe1eea73b0 .functor BUFZ 1, L_000001fe1eea7b20, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea7c70 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4a50_0, C4<1>, C4<1>;
+L_000001fe1eea7570 .functor NOT 1, v000001fe1eea4a50_0, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea7340 .functor AND 1, v000001fe1eea4690_0, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea7ce0 .functor AND 1, v000001fe1eea40f0_0, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1eea79d0 .functor AND 1, L_000001fe1eea7ce0, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea75e0 .functor AND 1, v000001fe1eea40f0_0, v000001fe1eea4190_0, C4<1>, C4<1>;
+L_000001fe1eea7d50 .functor AND 1, L_000001fe1eea75e0, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea7ea0 .functor OR 1, L_000001fe1eea8f20, L_000001fe1eea8140, C4<0>, C4<0>;
+L_000001fe1eea7f10 .functor OR 1, L_000001fe1eea7ea0, L_000001fe1eea8580, C4<0>, C4<0>;
+L_000001fe1eea76c0 .functor OR 1, L_000001fe1eea7f10, L_000001fe1eea90e0, C4<0>, C4<0>;
+L_000001fe1eea7c00 .functor OR 1, L_000001fe1eea76c0, L_000001fe1eea7d50, C4<0>, C4<0>;
+L_000001fe1eea7f80 .functor OR 1, L_000001fe1eea7c00, L_000001fe1eea8ba0, C4<0>, C4<0>;
+L_000001fe1eea7880 .functor BUFZ 1, L_000001fe1eea7f80, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea80d0 .functor AND 1, v000001fe1eea4190_0, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1eea8140 .functor AND 1, L_000001fe1eea80d0, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea78f0 .functor AND 1, v000001fe1eea40f0_0, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1eea77a0 .functor AND 1, L_000001fe1eea78f0, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea81b0 .functor AND 1, L_000001fe1eea8430, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea7960 .functor OR 1, L_000001fe1eea8660, L_000001fe1eea8a50, C4<0>, C4<0>;
+L_000001fe1eea7810 .functor OR 1, L_000001fe1eea7960, L_000001fe1eea8d60, C4<0>, C4<0>;
+L_000001fe1eea8890 .functor OR 1, L_000001fe1eea7810, L_000001fe1eea81b0, C4<0>, C4<0>;
+L_000001fe1eea8900 .functor OR 1, L_000001fe1eea8890, L_000001fe1eea86d0, C4<0>, C4<0>;
+L_000001fe1eea87b0 .functor BUFZ 1, L_000001fe1eea8900, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea8660 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea91c0 .functor AND 1, v000001fe1eea40f0_0, v000001fe1eea4190_0, C4<1>, C4<1>;
+L_000001fe1eea9070 .functor AND 1, L_000001fe1eea91c0, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea8dd0 .functor AND 1, v000001fe1eea4190_0, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1eea8cf0 .functor AND 1, L_000001fe1eea8dd0, L_000001fe1eea7570, C4<1>, C4<1>;
+L_000001fe1eea9150 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1eea8580 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1eea8a50 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4690_0, C4<1>, C4<1>;
+L_000001fe1eea83c0 .functor NOT 1, v000001fe1eea4690_0, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea8510 .functor AND 1, v000001fe1eea40f0_0, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea8b30 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea8430, C4<1>, C4<1>;
+L_000001fe1eea85f0 .functor AND 1, L_000001fe1eea8b30, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea8970 .functor AND 1, L_000001fe1eea8430, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea9230 .functor OR 1, L_000001fe1eea8e40, L_000001fe1eea8970, C4<0>, C4<0>;
+L_000001fe1eea8350 .functor BUFZ 1, L_000001fe1eea9230, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea8ba0 .functor AND 1, v000001fe1eea40f0_0, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea90e0 .functor AND 1, L_000001fe1eea8430, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea9000 .functor AND 1, v000001fe1eea4190_0, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea89e0 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea86d0 .functor AND 1, v000001fe1eea40f0_0, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea8820 .functor AND 1, L_000001fe1eea8430, L_000001fe1eea83c0, C4<1>, C4<1>;
+L_000001fe1eea8eb0 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4190_0, C4<1>, C4<1>;
+L_000001fe1eea8d60 .functor AND 1, L_000001fe1eea8c10, v000001fe1eea4190_0, C4<1>, C4<1>;
+L_000001fe1eea8430 .functor NOT 1, v000001fe1eea4190_0, C4<0>, C4<0>, C4<0>;
+L_000001fe1eea8e40 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea8430, C4<1>, C4<1>;
+L_000001fe1eea8f20 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea8430, C4<1>, C4<1>;
+L_000001fe1eea8ac0 .functor AND 1, L_000001fe1eea8c10, L_000001fe1eea8430, C4<1>, C4<1>;
+L_000001fe1eea8c10 .functor NOT 1, v000001fe1eea40f0_0, C4<0>, C4<0>, C4<0>;
+v000001fe1ee41150_0 .net "A", 0 0, L_000001fe1eea73b0;  alias, 1 drivers
+v000001fe1ee406b0_0 .net "B", 0 0, L_000001fe1eea87b0;  alias, 1 drivers
+v000001fe1ee40750_0 .net "C", 0 0, L_000001fe1eea8060;  alias, 1 drivers
+v000001fe1ee407f0_0 .net "D", 0 0, L_000001fe1eea7880;  alias, 1 drivers
+v000001fe1ee41010_0 .net "E", 0 0, L_000001fe1eea8350;  alias, 1 drivers
+v000001fe1ee40b10_0 .net "F", 0 0, L_000001fe1ee467a0;  alias, 1 drivers
+v000001fe1ee40bb0_0 .net "G", 0 0, L_000001fe1ee46ff0;  alias, 1 drivers
+v000001fe1ee40d90_0 .net "W", 0 0, v000001fe1eea40f0_0;  1 drivers
+v000001fe1ee413d0_0 .net "X", 0 0, v000001fe1eea4190_0;  1 drivers
+v000001fe1ee40e30_0 .net "Y", 0 0, v000001fe1eea4690_0;  1 drivers
+v000001fe1ee40ed0_0 .net "Z", 0 0, v000001fe1eea4a50_0;  1 drivers
+v000001fe1ee40f70_0 .net *"_ivl_0", 0 0, L_000001fe1ee47060;  1 drivers
+v000001fe1eea2ea0_0 .net *"_ivl_100", 0 0, L_000001fe1eea78f0;  1 drivers
+v000001fe1eea3300_0 .net *"_ivl_106", 0 0, L_000001fe1eea7960;  1 drivers
+v000001fe1eea2220_0 .net *"_ivl_108", 0 0, L_000001fe1eea7810;  1 drivers
+v000001fe1eea2fe0_0 .net *"_ivl_110", 0 0, L_000001fe1eea8890;  1 drivers
+v000001fe1eea3b20_0 .net *"_ivl_118", 0 0, L_000001fe1eea91c0;  1 drivers
+v000001fe1eea2e00_0 .net *"_ivl_12", 0 0, L_000001fe1ee470d0;  1 drivers
+v000001fe1eea2cc0_0 .net *"_ivl_122", 0 0, L_000001fe1eea8dd0;  1 drivers
+v000001fe1eea3080_0 .net *"_ivl_136", 0 0, L_000001fe1eea8b30;  1 drivers
+v000001fe1eea3bc0_0 .net *"_ivl_16", 0 0, L_000001fe1ee46650;  1 drivers
+v000001fe1eea33a0_0 .net *"_ivl_18", 0 0, L_000001fe1ee47220;  1 drivers
+v000001fe1eea2f40_0 .net *"_ivl_20", 0 0, L_000001fe1ee47290;  1 drivers
+v000001fe1eea39e0_0 .net *"_ivl_22", 0 0, L_000001fe1ee47300;  1 drivers
+v000001fe1eea3d00_0 .net *"_ivl_28", 0 0, L_000001fe1ee46880;  1 drivers
+v000001fe1eea2720_0 .net *"_ivl_32", 0 0, L_000001fe1ee469d0;  1 drivers
+v000001fe1eea3760_0 .net *"_ivl_36", 0 0, L_000001fe1ee46b90;  1 drivers
+v000001fe1eea3440_0 .net *"_ivl_4", 0 0, L_000001fe1ee46730;  1 drivers
+v000001fe1eea20e0_0 .net *"_ivl_42", 0 0, L_000001fe1eea7dc0;  1 drivers
+v000001fe1eea1f00_0 .net *"_ivl_44", 0 0, L_000001fe1eea7ff0;  1 drivers
+v000001fe1eea34e0_0 .net *"_ivl_46", 0 0, L_000001fe1eea7490;  1 drivers
+v000001fe1eea1fa0_0 .net *"_ivl_48", 0 0, L_000001fe1eea7730;  1 drivers
+v000001fe1eea31c0_0 .net *"_ivl_58", 0 0, L_000001fe1eea7b90;  1 drivers
+v000001fe1eea3580_0 .net *"_ivl_6", 0 0, L_000001fe1ee46960;  1 drivers
+v000001fe1eea3c60_0 .net *"_ivl_60", 0 0, L_000001fe1eea7500;  1 drivers
+v000001fe1eea2a40_0 .net *"_ivl_62", 0 0, L_000001fe1eea7e30;  1 drivers
+v000001fe1eea3da0_0 .net *"_ivl_64", 0 0, L_000001fe1eea8220;  1 drivers
+v000001fe1eea3620_0 .net *"_ivl_76", 0 0, L_000001fe1eea7ce0;  1 drivers
+v000001fe1eea3a80_0 .net *"_ivl_80", 0 0, L_000001fe1eea75e0;  1 drivers
+v000001fe1eea29a0_0 .net *"_ivl_84", 0 0, L_000001fe1eea7ea0;  1 drivers
+v000001fe1eea36c0_0 .net *"_ivl_86", 0 0, L_000001fe1eea7f10;  1 drivers
+v000001fe1eea3800_0 .net *"_ivl_88", 0 0, L_000001fe1eea76c0;  1 drivers
+v000001fe1eea24a0_0 .net *"_ivl_90", 0 0, L_000001fe1eea7c00;  1 drivers
+v000001fe1eea3120_0 .net *"_ivl_96", 0 0, L_000001fe1eea80d0;  1 drivers
+v000001fe1eea3260_0 .net "and_0_out", 0 0, L_000001fe1eea8ac0;  1 drivers
+v000001fe1eea2040_0 .net "and_10_out", 0 0, L_000001fe1eea86d0;  1 drivers
+v000001fe1eea2400_0 .net "and_11_out", 0 0, L_000001fe1eea89e0;  1 drivers
+v000001fe1eea2360_0 .net "and_12_out", 0 0, L_000001fe1eea7420;  1 drivers
+v000001fe1eea38a0_0 .net "and_13_out", 0 0, L_000001fe1eea8eb0;  1 drivers
+v000001fe1eea27c0_0 .net "and_14_out", 0 0, L_000001fe1eea7ab0;  1 drivers
+v000001fe1eea2540_0 .net "and_15_out", 0 0, L_000001fe1eea77a0;  1 drivers
+v000001fe1eea3940_0 .net "and_16_out", 0 0, L_000001fe1eea9000;  1 drivers
+v000001fe1eea25e0_0 .net "and_17_out", 0 0, L_000001fe1eea8f20;  1 drivers
+v000001fe1eea2ae0_0 .net "and_18_out", 0 0, L_000001fe1eea8140;  1 drivers
+v000001fe1eea2180_0 .net "and_19_out", 0 0, L_000001fe1eea8580;  1 drivers
+v000001fe1eea22c0_0 .net "and_1_out", 0 0, L_000001fe1eea7c70;  1 drivers
+v000001fe1eea2680_0 .net "and_20_out", 0 0, L_000001fe1eea90e0;  1 drivers
+v000001fe1eea2860_0 .net "and_21_out", 0 0, L_000001fe1eea7d50;  1 drivers
+v000001fe1eea2900_0 .net "and_22_out", 0 0, L_000001fe1eea8ba0;  1 drivers
+v000001fe1eea2b80_0 .net "and_23_out", 0 0, L_000001fe1eea8e40;  1 drivers
+v000001fe1eea2c20_0 .net "and_24_out", 0 0, L_000001fe1eea8970;  1 drivers
+v000001fe1eea2d60_0 .net "and_25_out", 0 0, L_000001fe1eea85f0;  1 drivers
+v000001fe1eea4370_0 .net "and_26_out", 0 0, L_000001fe1ee46c00;  1 drivers
+v000001fe1eea3fb0_0 .net "and_27_out", 0 0, L_000001fe1ee46a40;  1 drivers
+v000001fe1eea4cd0_0 .net "and_28_out", 0 0, L_000001fe1ee46b20;  1 drivers
+v000001fe1eea5270_0 .net "and_29_out", 0 0, L_000001fe1eea79d0;  1 drivers
+v000001fe1eea4230_0 .net "and_2_out", 0 0, L_000001fe1eea8cf0;  1 drivers
+v000001fe1eea4550_0 .net "and_30_out", 0 0, L_000001fe1ee471b0;  1 drivers
+v000001fe1eea5db0_0 .net "and_31_out", 0 0, L_000001fe1eea9150;  1 drivers
+v000001fe1eea4410_0 .net "and_32_out", 0 0, L_000001fe1eea7340;  1 drivers
+v000001fe1eea4d70_0 .net "and_33_out", 0 0, L_000001fe1eea8510;  1 drivers
+v000001fe1eea51d0_0 .net "and_34_out", 0 0, L_000001fe1ee465e0;  1 drivers
+v000001fe1eea4730_0 .net "and_3_out", 0 0, L_000001fe1eea8820;  1 drivers
+v000001fe1eea58b0_0 .net "and_4_out", 0 0, L_000001fe1eea9070;  1 drivers
+v000001fe1eea5810_0 .net "and_5_out", 0 0, L_000001fe1eea7650;  1 drivers
+v000001fe1eea5950_0 .net "and_6_out", 0 0, L_000001fe1eea8660;  1 drivers
+v000001fe1eea4eb0_0 .net "and_7_out", 0 0, L_000001fe1eea8a50;  1 drivers
+v000001fe1eea5b30_0 .net "and_8_out", 0 0, L_000001fe1eea8d60;  1 drivers
+v000001fe1eea42d0_0 .net "and_9_out", 0 0, L_000001fe1eea81b0;  1 drivers
+v000001fe1eea4c30_0 .net "not_0_out", 0 0, L_000001fe1eea8c10;  1 drivers
+v000001fe1eea44b0_0 .net "not_1_out", 0 0, L_000001fe1eea8430;  1 drivers
+v000001fe1eea5770_0 .net "not_2_out", 0 0, L_000001fe1eea83c0;  1 drivers
+v000001fe1eea5a90_0 .net "not_3_out", 0 0, L_000001fe1eea7570;  1 drivers
+v000001fe1eea5bd0_0 .net "or_0_out", 0 0, L_000001fe1eea7b20;  1 drivers
+v000001fe1eea56d0_0 .net "or_1_out", 0 0, L_000001fe1eea8900;  1 drivers
+v000001fe1eea3f10_0 .net "or_2_out", 0 0, L_000001fe1eea7a40;  1 drivers
+v000001fe1eea5310_0 .net "or_3_out", 0 0, L_000001fe1eea7f80;  1 drivers
+v000001fe1eea59f0_0 .net "or_4_out", 0 0, L_000001fe1eea9230;  1 drivers
+v000001fe1eea5c70_0 .net "or_5_out", 0 0, L_000001fe1ee46810;  1 drivers
+v000001fe1eea4ff0_0 .net "or_6_out", 0 0, L_000001fe1ee466c0;  1 drivers
+E_000001fe1ee43100/0 .event anyedge, v000001fe1eea5bd0_0, v000001fe1eea56d0_0, v000001fe1eea3f10_0, v000001fe1eea5310_0;
+E_000001fe1ee43100/1 .event anyedge, v000001fe1eea59f0_0, v000001fe1eea5c70_0, v000001fe1eea4ff0_0;
+E_000001fe1ee43100 .event/or E_000001fe1ee43100/0, E_000001fe1ee43100/1;
+    .scope S_000001fe1ee4ac10;
+T_0 ;
+    %wait E_000001fe1ee43100;
+    %vpi_call 3 77 "$display", "SevenSegDisplay:SevenSegDisplay_0.abcdefg. = %b%b%b%b%b%b%b%b}", v000001fe1eea5bd0_0, v000001fe1eea56d0_0, v000001fe1eea3f10_0, v000001fe1eea5310_0, v000001fe1eea59f0_0, v000001fe1eea5c70_0, v000001fe1eea4ff0_0, " " {0 0 0};
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_000001fe1ee4b230;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea40f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4190_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4690_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4a50_0, 0, 1;
+    %vpi_call 2 16 "$display", "Group #3" {0 0 0};
+    %delay 15, 0;
+    %vpi_call 2 19 "$display", "ABCDEFG = %b%b%b%b%b%b%b", v000001fe1eea5090_0, v000001fe1eea47d0_0, v000001fe1eea5450_0, v000001fe1eea54f0_0, v000001fe1eea45f0_0, v000001fe1eea4050_0, v000001fe1eea5d10_0 {0 0 0};
+    %delay 15, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea40f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001fe1eea4190_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4690_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4a50_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 28 "$display", "ABCDEFG = %b%b%b%b%b%b%b", v000001fe1eea5090_0, v000001fe1eea47d0_0, v000001fe1eea5450_0, v000001fe1eea54f0_0, v000001fe1eea45f0_0, v000001fe1eea4050_0, v000001fe1eea5d10_0 {0 0 0};
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001fe1eea40f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4190_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4690_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fe1eea4a50_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 37 "$display", "ABCDEFG = %b%b%b%b%b%b%b", v000001fe1eea5090_0, v000001fe1eea47d0_0, v000001fe1eea5450_0, v000001fe1eea54f0_0, v000001fe1eea45f0_0, v000001fe1eea4050_0, v000001fe1eea5d10_0 {0 0 0};
+    %vpi_call 2 38 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "DE1_S14_G3_tb.v";
+    "./de1_s14_g3.v";
